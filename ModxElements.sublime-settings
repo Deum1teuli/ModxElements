@@ -1,0 +1,9 @@
+{
+	//Syntax name for different Modx elements
+	"syntax": {
+		"modChunk": "HTML (ModxElements).sublime-syntax",
+		"modTemplate": "HTML (ModxElements).sublime-syntax",
+		"modSnippet": "PHP.sublime-syntax",
+		"modPlugin": "PHP.sublime-syntax"
+	}
+}

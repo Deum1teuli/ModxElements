@@ -1,0 +1,56 @@
+%YAML 1.2
+---
+name: HTML (ModxElements)
+scope: text.html-modx
+
+contexts:
+  main:
+    - match: ''
+      push: scope:text.html.basic
+      with_prototype:
+        - include: modx
+
+  modx:
+    - match: (?:\[\[\s*!?\s*\$\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+\b)
+      captures:
+        1: entity.name.tag.chunk.modx
+
+    - match: (?:\[\[\s*!?\s*\*\s*)(id|type|contentType|pagetitle|longtitle|description|alias|link_attributes|published|pub_date|unpub_date|parent|isfolder|introtext|content|richtext|template|menuindex|searchable|cacheable|createdby|createdon|editedby|editedon|deleted|deletedby|deletedon|publishedon|publishedby|menutitle|donthit|privateweb|privatemgr|content_dispo|hidemenu|class_key|context_key|content_type|uri|uri_override|hide_children_in_tree|show_in_tree)\b
+      captures:
+        1: entity.name.tag.resourcefield.modx
+
+    - match: (?:\[\[\s*!?\s*\*\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+      captures:
+        1: entity.name.tag.templatevar.modx
+
+    - match: (?:\[\[\s*!?\s*\~\s*)(\d+)\b
+      captures:
+        1: entity.name.tag.link.modx
+
+    - match: (?:\[\[\s*!?\s*\+\+\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+      captures:
+        1: entity.name.tag.settings.modx
+
+    - match: (?:\[\[\s*!?\s*\+\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+      captures:
+        1: entity.name.tag.placeholder.modx
+
+    - match: (?:\[\[\s*!?\s*%\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+      captures:
+        1: entity.name.tag.language.modx
+
+    - match: (\[\[\s*!?\s*\-)
+      scope: punctuation.definition.tag.begin.comment.modx
+      push:
+        - meta_scope: comment.block.modx
+        - match: '(?:\]\])'
+          scope: punctuation.definition.tag.end.comment.modx
+          pop: true
+
+    - match: (?:\[\[\s*!?\s*#\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+      captures:
+        1: entity.name.tag.fastfield.modx
+
+    - match: (?:\[\[\s*!?\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+      captures:
+        1: entity.name.tag.snippet.modx

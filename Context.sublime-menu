@@ -1,0 +1,32 @@
+[
+	{
+		"caption": "Create Modx element",
+		"children":
+		[
+			{
+				"command": "modx_element_create",
+				"args": { "element_class": "modTemplate" },
+				"caption": "template"
+			},
+			{
+				"command": "modx_element_create",
+				"args": { "element_class": "modChunk" },
+				"caption": "chunk"
+			},
+			{
+				"command": "modx_element_create",
+				"args": { "element_class": "modSnippet" },
+				"caption": "snippet"
+			},
+			{
+				"command": "modx_element_create",
+				"args": { "element_class": "modPlugin" },
+				"caption": "plugin"
+			},
+		]
+	},
+	{
+		"command": "modx_element_selected_open",
+		"caption": "Open Modx element"
+	}
+]
