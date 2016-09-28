@@ -193,6 +193,7 @@ class ModxServerSetCommand(sublime_plugin.WindowCommand):
 			response = api_request('/connectors/security/login.php', **server)
 			settings.set('server_token', response['object']['token'])
 			sublime.save_settings('ModxElements.sublime-settings')
+			sublime.status_message('Modx Server saved')
 
 		self.window.show_input_panel('Modx Server Address', settings.get('server_address', 'http://'), on_server_address, None, None)
 

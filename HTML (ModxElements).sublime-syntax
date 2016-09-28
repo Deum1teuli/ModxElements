@@ -11,7 +11,7 @@ contexts:
         - include: modx
 
   modx:
-    - match: (?:\[\[\s*!?\s*\$\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+\b)
+    - match: (?:\[\[\s*!?\s*\$\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s\p{L}]+)
       captures:
         1: entity.name.tag.chunk.modx
 
@@ -19,7 +19,7 @@ contexts:
       captures:
         1: entity.name.tag.resourcefield.modx
 
-    - match: (?:\[\[\s*!?\s*\*\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+    - match: (?:\[\[\s*!?\s*\*\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s\p{L}]+)
       captures:
         1: entity.name.tag.templatevar.modx
 
@@ -27,15 +27,15 @@ contexts:
       captures:
         1: entity.name.tag.link.modx
 
-    - match: (?:\[\[\s*!?\s*\+\+\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+    - match: (?:\[\[\s*!?\s*\+\+\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s\p{L}]+)
       captures:
         1: entity.name.tag.settings.modx
 
-    - match: (?:\[\[\s*!?\s*\+\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+    - match: (?:\[\[\s*!?\s*\+\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s\p{L}]+)
       captures:
         1: entity.name.tag.placeholder.modx
 
-    - match: (?:\[\[\s*!?\s*%\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+    - match: (?:\[\[\s*!?\s*%\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s\p{L}]+)
       captures:
         1: entity.name.tag.language.modx
 
@@ -47,10 +47,10 @@ contexts:
           scope: punctuation.definition.tag.end.comment.modx
           pop: true
 
-    - match: (?:\[\[\s*!?\s*#\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+    - match: (?:\[\[\s*!?\s*#\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s\p{L}]+)
       captures:
         1: entity.name.tag.fastfield.modx
 
-    - match: (?:\[\[\s*!?\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s]+)\b
+    - match: (?:\[\[\s*!?\s*)([a-zA-Z0-9\x2d-\x2f\x7f-\xff-_\s\p{L}]+)
       captures:
         1: entity.name.tag.snippet.modx
