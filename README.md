@@ -8,6 +8,6 @@ Configure server via `Tools -> ModxElements -> Set Server` or command `ModxEleme
 
 ### Shortcuts
 
-* `Ctrl + k + c` - Create element
-* `Ctrl + k + e` - Edit element
-* `Ctrl + k + k` - Open selected element
+* `Ctrl + k, Ctrl + Alt + c` - Create element
+* `Ctrl + k, Ctrl + Alt + e` - Edit element
+* `Ctrl + k, Ctrl + Alt + k` - Open selected element

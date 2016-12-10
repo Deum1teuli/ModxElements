@@ -189,8 +189,9 @@ class ModxServerSetCommand(sublime_plugin.WindowCommand):
 		@catch_errors
 		def on_server_password(server_password):
 			server['password'] = server_password
+			server['action'] = 'security/login'
 			settings.set('server_address', server['address'])
-			response = api_request('/connectors/security/login.php', **server)
+			response = api_request('/connectors/', **server)
 			settings.set('server_token', response['object']['token'])
 			sublime.save_settings('ModxElements.sublime-settings')
 			sublime.status_message('Modx Server saved')

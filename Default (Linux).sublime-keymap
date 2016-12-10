@@ -1,5 +1,5 @@
 [
-	{ "keys": ["ctrl+k", "ctrl+c"], "command": "modx_element_create" },
-	{ "keys": ["ctrl+k", "ctrl+e"], "command": "modx_element_open" },
-	{ "keys": ["ctrl+k", "ctrl+k"], "command": "modx_element_selected_open" }
+	{ "keys": ["ctrl+k", "ctrl+alt+c"], "command": "modx_element_create" },
+	{ "keys": ["ctrl+k", "ctrl+alt+e"], "command": "modx_element_open" },
+	{ "keys": ["ctrl+k", "ctrl+alt+k"], "command": "modx_element_selected_open" }
 ]
