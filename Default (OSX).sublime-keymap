@@ -1,5 +1,5 @@
 [
-	{ "keys": ["super+k", "super+c"], "command": "modx_element_create" },
-	{ "keys": ["super+k", "super+e"], "command": "modx_element_open" },
-	{ "keys": ["super+k", "super+k"], "command": "modx_element_selected_open" }
+	{ "keys": ["super+k", "super+alt+c"], "command": "modx_element_create" },
+	{ "keys": ["super+k", "super+alt+e"], "command": "modx_element_open" },
+	{ "keys": ["super+k", "super+alt+k"], "command": "modx_element_selected_open" }
 ]
